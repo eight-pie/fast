@@ -1,0 +1,218 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="com.ffft.core.*" %>
+<%@ page import="com.ffft.core.dbms.*" %>
+<%@ page import="com.ffft.tournament.*" %>
+<%@ page import="com.ffft.federation.*" %>
+<%@ page import="com.ffft.shared.*" %>
+<%@ page import="com.ffft.util.*" %>
+<%@ page import="java.text.*" %>
+<%@ page import="java.util.*" %>
+<%@ page import="java.util.logging.*" %>
+<%@ page import="org.apache.commons.lang.*" %>
+<%@ page import="org.apache.commons.lang.math.NumberUtils" %>
+<%@ taglib prefix="fast" tagdir="/WEB-INF/tags" %>
+<%
+	response.setHeader("Cache-Control",	"no-cache,no-store,max-age=0,s-maxage=0");
+	response.setHeader("Pragma", "no-cache");
+
+	ApplicationMgr app = ApplicationMgr.getInstance();
+
+	try
+	{
+		Locale locale = app.getDefaultLocale();
+		Tournament tournament = app.getActiveTournament(request);
+	
+		if (tournament == null)
+			throw new IllegalStateException("no tournament is active");
+	
+		String tournamentCountry = app.getDatabaseMgr().getCountryMgr().getCountryByCode(locale.getLanguage(), tournament.getCountry());
+%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+
+<style type="text/css">
+
+body {margin-left:10px; margin-right:10px; margin-top:5px; margin-bottom:0px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:16px;}
+textarea,p {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:12px;}
+td {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:18px; vertical-align: middle; text-align:justify;}
+select {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:22px; vertical-align: middle; font-weight:bold; width:60px;}
+input {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:18px; vertical-align: middle;}
+
+.title_box { 
+color : #000000;
+background-color : #C9E0E7;
+text-align:center;
+font-weight:bold;
+font-size:20px;
+border-color:#000000;
+border-style:solid;
+border-width:1px;
+padding:10px;
+padding-left:20px;
+padding-right:20px;
+border-bottom-width:0px;
+}
+
+.content_box {
+color : #000000;
+text-align:center;
+font-weight:bold;
+font-size:20px;
+border-color:#000000;
+border-style:solid;
+border-width:1px;
+padding:30px;
+padding-left:20px;
+padding-right:20px;
+background-color:#F8FBFC;
+}
+
+.flags {
+width:110px; 
+text-align:center;
+}
+
+.text_lang {
+text-align:center;
+}
+</style>
+
+<title><%= app.getMsg(locale, "common.application.name") %> - <%= app.getMsg(locale, "players.station.label") %></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="../../shared/jsfiles/xmldom.js"></script>
+<script type="text/javascript" src="../../shared/jsfiles/utils.js"></script>
+
+<script type="text/javascript">
+<!--
+
+function init()
+{
+	
+}
+
+//-->
+</script>
+
+</head>
+
+<body onLoad="init()" style="margin-top:0px; margin-bottom:0px; margin-left:3px; margin-right:3px;">
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+	<tr>
+		<td style="text-align:left; width:250px; height:10px;"><img src="../../shared/img/logo_itsf_mini.jpg" alt="I.T.S.F" border="0"></td>
+		<td style="text-align:center;">
+			<table cellpadding="0" cellspacing="0" border="0" align="center">
+				<tr>
+					<td style="text-align:center; font-weight:bold; font-size:22px;"><%=tournamentCountry%> - <%=tournament.getName()%></td>
+				</tr>
+				<tr>
+					<td style="text-align:center; font-weight:bold; font-size:14px; padding-top:1px;"><%=tournament.getType().getLabel(locale)%></td>
+				</tr>
+			</table>
+		</td>
+		<td style="text-align:right; width:250px;"><img src="../../shared/img/logo_fast_mini.jpg" alt="<%= app.getMsg(locale, "common.application.name") %>"></td>
+	</tr>
+	<tr>
+		<td colspan="3" style="vertical-align:middle;">
+			<table border="0" cellspacing="0" cellpadding="0" align="center">
+				<tr>
+					<td class="title_box">
+						BORNE D'INFORMATIONS I.T.S.F
+					</td>
+				</tr>
+				<tr>
+					<td class="content_box">
+						<table border="0" cellspacing="0" cellpadding="0" align="center" style="padding-top:0px;">
+							<tr>
+								<td colspan="8" style="text-align:center;">
+									<table border="0" cellspacing="0" cellpadding="0" align="center">
+										<tr>
+											<td>
+												<ul>
+													<li style="padding:2px;">Choisissez votre langue en cliquant sur un drapeau</li>
+													<li style="padding:2px;">Choose your language by clicking on a flag</li>
+													<li style="padding:2px;">Wählen Sie Ihre Sprache, indem Sie auf eine Flagge</li>
+													<li style="padding:2px;">Scegliete la vostra lingua cliccando su una bandiera</li>
+													<li style="padding:2px;">Elija su idioma haciendo clic en una bandera</li>
+													<li style="padding:2px;">Изберете вашия език, като щракнете върху флага</li>
+													<li style="padding:2px;">Vyberte si Váš jazyk kliknutím na vlajku</li>
+													<li style="padding:2px;">Kies uw taal door te klikken op een vlag</li>
+												</ul>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr><td colspan="8" style="padding-bottom:30px;"></td></tr>
+							<tr>
+								<td class="flags">
+									<a href="players_station_home.jsp?lang=en"><img src="../../shared/img/flags_large/en.png" alt="Anglais" title="Anglais" border="0"></a>
+								</td>
+								<td class="flags">
+									<a href="players_station_home.jsp?lang=de"><img src="../../shared/img/flags_large/de.png" alt="Anglais" title="Anglais" border="0"></a>
+								</td>
+								<td class="flags">
+									<a href="players_station_home.jsp?lang=sk"><img src="../../shared/img/flags_large/sk.png" alt="Anglais" title="Anglais" border="0"></a>
+								</td>
+								<td class="flags">
+									<a href="players_station_home.jsp?lang=nl"><img src="../../shared/img/flags_large/nl.png" alt="Anglais" title="Anglais" border="0"></a>
+								</td>
+								<td class="flags">
+									<a href="players_station_home.jsp?lang=it"><img src="../../shared/img/flags_large/it.png" alt="Anglais" title="Anglais" border="0"></a>
+								</td>
+								<td class="flags">
+									<a href="players_station_home.jsp?lang=fr"><img src="../../shared/img/flags_large/fr.png" alt="Anglais" title="Anglais" border="0"></a>
+								</td>
+								<td class="flags">
+									<a href="players_station_home.jsp?lang=es"><img src="../../shared/img/flags_large/es.png" alt="Anglais" title="Anglais" border="0"></a>
+								</td>
+								<td class="flags">
+									<a href="players_station_home.jsp?lang=bg"><img src="../../shared/img/flags_large/bg.png" alt="Anglais" title="Anglais" border="0"></a>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>
+<%
+	}
+	catch (Exception e)
+	{
+		app.getLogger().logp(Level.SEVERE, getClass().getName(), "players_station_home.jsp", "exception  : " + Utilities.getStackTrace(e));
+%>
+<html>
+
+<head>
+
+	<title><fast:msg key="common.application.name" /></title>
+
+</head>
+
+<body style="margin-top:0px; margin-bottom:0px; margin-left:3px; margin-right:3px;">
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+	<tr>
+		<td style="height:100px;">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="text-align:center; vertical-align:center; font-weight:bold; color:#DE0000; font-size:26px; background-color:#c9dbe7; border-style:solid; border-width:1px; border-color:#406498; padding:20px;">
+			<fast:msg key="players.station.error.general" />
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>
+<%
+	}
+%>

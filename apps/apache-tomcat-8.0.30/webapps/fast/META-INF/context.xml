@@ -1,0 +1,17 @@
+<Context path="/fast" docBase="C:\Donnees\Projets\FAST\v1\dev_eclipse\src\main\www" reloadable="false" crossContext="true">
+	<Resource name="jdbc/FAST" auth="Container" type="javax.sql.DataSource"
+		maxTotal="100" maxIdle="30" maxWaitMillis="10000" username="fast"
+		password="treba+" driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://127.0.0.1:3306/fast_db?autoReconnect=false&amp;useUnicode=true&amp;characterEncoding=UTF-8"
+		validationQuery="select 1" testOnBorrow="true" />
+
+	<Realm className="org.apache.catalina.realm.DataSourceRealm"
+		dataSourceName="jdbc/FAST" localDataSource="true" userTable="USERS"
+		userNameCol="LOGIN" userCredCol="PASSWORD" userRoleTable="USER_ROLES"
+		roleNameCol="RIGHT_NAME" />
+
+	<Manager pathname="" />
+	<Valve className="org.apache.catalina.authenticator.FormAuthenticator"
+		changeSessionIdOnAuthentication="false" />
+</Context>
+

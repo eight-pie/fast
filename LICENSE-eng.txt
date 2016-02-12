@@ -1,0 +1,46 @@
+FAST USER'S LICENCE
+
+TERMS OF THE LICENCE
+
+Definitions:
+
+FAST: Fast Advanced Software for Table Soccer
+ITSF: International Table Soccer Federation
+
+I. Software's definition:
+
+FAST is a Table Soccer tournaments' management software. It is licenced as a "freeware": it is free but submited to restrictions, as listed below in chapter III (III. Restrictions).
+FAST is made available by the ITSF to its member federations.
+
+II. Terms of the licence agreement:
+
+The licence agreement gives the right to use FAST, but it doesn't give, in any way, property's rights on the software.
+
+III. Restrictions
+
+III.a. Decompilation:
+
+Decompilation, modifications, translations (other than those submitted to the ITSF) and any change made on the software without the ITSF's consent are not allowed.
+
+III.b. Use:
+
+FAST's use is restricted to Table Soccer tournaments. It must not be used in any way for the management of other sports tournaments or activites that are not linked to Table Soccer.
+
+Only the ITSF's affiliated member federations are allowed to use FAST. To find out if a federation is affiliated to the ITSF, please check the "members" section on the ITSF website: http://www.table-soccer.org/members/
+
+III.c. Responsabilities:
+
+The ITSF can not be held responsible for any damage suffered by any system during the installation, use and uninstallation of FAST.
+
+The ITSF can not be held responsible for the information contained in the initialization file given for a tournament.
+This information must be reviewed by the tournament's organizers.
+
+III.d. Use of the software in its entirety: 
+
+Using FAST is allowed only when it involves the whole software. It is forbidden to use separate parts of the software (eg: database or plugins).
+
+IV. Distribution:
+
+Only the ITSF can allow the use of FAST, through the "FAST" section of its website (http://www.table-soccer.org/page/fast).
+
+

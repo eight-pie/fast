@@ -1,0 +1,150 @@
+.scores {
+font-size: 10px;
+font-weight: bold;
+color: #000000;
+text-decoration: none;
+height:14px;
+text-align:center;
+vertical-align:top;
+}
+
+.scores_dko {
+font-size: 7px;
+font-weight: bold;
+color: #000000;
+text-decoration: none;
+height:10px;
+text-align:center;
+vertical-align:top;
+}
+
+.treeTitle {
+font-size: 12px;
+font-weight: bold;
+color: #000000;
+text-decoration: none;
+text-align:center;
+background-color:#C9E0E7; 
+}
+	
+a.treeTitle:link, a.treeTitle:visited, a.treeTitle:active {
+color: #000000;
+font-weight: bold;
+text-decoration: none;
+}
+
+a.treeTitle:hover {
+color: #FFFFFF;
+text-decoration: none;
+}
+
+.interLine {
+background-color:#5E5E5E;
+}
+
+.cellMatch_SCHEDULED {
+height:14px;
+text-align:center;
+vertical-align:bottom;
+background-color:#C3E5FD; /*#ACDAFB;*/
+}
+
+.cellMatch_IN_PROGRESS {
+height:14px;
+text-align:center;
+vertical-align:bottom;
+background-color:#C1FFC1; /*#A8FFA8;*/
+}
+
+.cellMatch_FINISHED {
+height:14px;
+text-align:center;
+vertical-align:bottom;
+background-color:#E0E0E0; /*#E0D0E6;*/
+}
+
+.cellMatch_SEARCH {
+height:14px;
+text-align:center;
+vertical-align:bottom;
+background-color:#F3D698;
+text-decoration: blink;
+}
+
+.cellMatch_CONFLICT {
+height:14px;
+text-align:center;
+vertical-align:bottom;
+background-color:#FF9191; /*#FF5555;*/
+}
+
+.cellMatch_NONE {
+height:14px;
+text-align:center;
+vertical-align:bottom;
+background-color:#ffffff;
+}
+
+.labelMatchWinner {
+font-size:13px;
+color:#000000;
+background-color:#C3DFFF; /* #1D58FF;*/
+font-weight: bold;
+text-decoration: none;
+padding-top:5px;
+padding-bottom:5px;
+}
+
+.labelMatchThirdPlace {
+font-size:11px;
+color:#000000;
+background-color:#C3DFFF; /* #1D58FF;*/
+font-weight: bold;
+text-decoration: none;
+}
+
+.linkMatch {
+font-size:11px;
+color:#002997;
+font-weight: bold;
+text-decoration: none;
+}
+
+.linkMatch_dko {
+font-size:9px;
+color:#002997;
+font-weight: bold;
+text-decoration: none;
+}
+	
+a.linkMatch:link,a.linkMatch:visited,a.linkMatch:active {
+color:#002997;
+text-decoration: none;
+}
+
+a.linkMatch:hover {
+color: #D80AF5;
+text-decoration: none;
+}
+
+a.linkMatch_dko:link,a.linkMatch_dko:visited,a.linkMatch_dko:active {
+color:#002997;
+text-decoration: none;
+}
+
+a.linkMatch_dko:hover {
+color: #D80AF5;
+text-decoration: none;
+}
+
+div#scrollChart {
+width:950px;
+height:443px;
+overflow:auto;
+border-style:solid; 
+border-color:black; 
+border-width:1px;
+padding:0px;
+margin:0px;
+background-color:#ffffff;
+}

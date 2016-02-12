@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Server port="12001" shutdown="SHUTDOWN">
+  <!-- 
+  <Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />
+  <Listener className="org.apache.catalina.core.JasperListener" />
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
+  <Listener className="org.apache.catalina.mbeans.ServerLifecycleListener" />
+  -->
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+  
+  <Service name="Catalina">
+    <Connector port="12000" maxHttpHeaderSize="8192"
+               maxThreads="150" minSpareThreads="25" maxSpareThreads="75"
+               enableLookups="false" redirectPort="8443" acceptCount="100"
+               connectionTimeout="20000" disableUploadTimeout="true" />
+    <Engine name="Catalina" defaultHost="localhost">
+      <Host name="localhost" appBase="webapps" unpackWARs="true" autoDeploy="true" xmlValidation="false" xmlNamespaceAware="false" errorReportValveClass="org.fast4foos.tomcat.ErrorReportValve">
+      	<Context path="/fast" reloadable="false" crossContext="true">
+
+	
+
+	<Resource name="jdbc/FAST" auth="Container" type="javax.sql.DataSource"
+		maxActive="100" maxIdle="30" maxWait="10000" username="fast" password="treba+"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://127.0.0.1:12002/fast_db?autoReconnect=false&amp;useUnicode=true&amp;characterEncoding=UTF-8" validationQuery="select 1" testOnBorrow="true" />
+
+	<Realm className="com.ffft.shared.jdbc.FastRealmJdbc" dataSourceName="jdbc/FAST" localDataSource="true" />
+	<Manager pathname="" />
+	<Valve className="org.apache.catalina.authenticator.FormAuthenticator" changeSessionIdOnAuthentication="false" />
+</Context>
+
+
+      </Host>
+    </Engine>
+  </Service>
+</Server>

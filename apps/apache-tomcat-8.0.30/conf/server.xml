@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Server port="12001" shutdown="SHUTDOWN">
+  <Listener className="org.apache.catalina.startup.VersionLoggerListener" />
+  <!-- Security listener. Documentation at /docs/config/listeners.html
+  <Listener className="org.apache.catalina.security.SecurityListener" />
+  -->
+  <!--APR library loader. Documentation at /docs/apr.html -->
+  <!--<Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />-->
+  <!-- Prevent memory leaks due to use of particular java/javax APIs-->
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+  <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" />
+
+  <Service name="Catalina">
+  <Connector port="12000" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" />
+    <Engine name="Catalina" defaultHost="localhost">
+      <Host name="localhost"  appBase="webapps" unpackWARs="true" autoDeploy="true" errorReportValveClass="org.fast4foos.tomcat.ErrorReportValve">
+     	<Context path="/fast" reloadable="false" crossContext="true">
+
+	<Resource name="jdbc/FAST" auth="Container" type="javax.sql.DataSource"
+		maxTotal="100" maxIdle="30" maxWaitMillis="10000" username="fast"
+		password="treba+" driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://127.0.0.1:12002/fast_db?autoReconnect=false&amp;useUnicode=true&amp;characterEncoding=UTF-8"
+		validationQuery="select 1" testOnBorrow="true" />
+
+	<Realm className="org.apache.catalina.realm.DataSourceRealm"
+		dataSourceName="jdbc/FAST" localDataSource="true" userTable="USERS"
+		userNameCol="LOGIN" userCredCol="PASSWORD" userRoleTable="USER_ROLES"
+		roleNameCol="RIGHT_NAME" />
+
+	<Manager pathname="" />
+	
+	<Valve className="org.apache.catalina.authenticator.FormAuthenticator"
+		changeSessionIdOnAuthentication="false" />
+		
+</Context>
+
+
+      </Host>
+    </Engine>
+  </Service>
+</Server>

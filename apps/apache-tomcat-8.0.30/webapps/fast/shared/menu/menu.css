@@ -1,0 +1,200 @@
+#menu
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;  
+	background-color: #C9E0E7;
+    border: 1px solid #316AC5;
+    border-top: none;
+}
+
+#menu li
+{
+	float: left;
+	position: relative;
+}
+
+#menu li.separator
+{
+	background-image: url("../img/icons/sep_grey.gif");
+	background-repeat: no-repeat;
+	background-size: 90% 3px;
+    background-position: center center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#menu li.separator:hover
+{
+  	background-color: #C9E0E7;
+}
+
+#menu li.separator a:hover
+{
+	cursor: default;
+}
+
+#menu a 
+{
+	float: left;
+	height: auto;
+	margin: 0 2px 0 2px;
+	padding: 0 7px 0 7px;
+	color: #000000;
+  	font-weight: bold;
+  	font-size: 11px;
+  	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+#menu li.icon-item a
+{
+	margin: 0;
+	padding: 0;
+}
+
+#menu a.pastille
+{
+	margin-left: 5px;
+	padding-left: 18px;
+	background-repeat: no-repeat;
+    background-position: left center;
+}
+
+#menu a.pastille-red
+{
+	background-image: url("../img/icons/pastille_rouge_normal.gif");
+}
+
+#menu a.pastille-red:hover
+{
+	background-image: url("../img/icons/pastille_rouge_rollover.gif");
+}
+
+#menu a.pastille-green
+{
+	background-image: url("../img/icons/pastille_verte_normal.gif");
+}
+
+#menu a.pastille-green:hover
+{
+	background-image: url("../img/icons/pastille_verte_rollover.gif");
+}
+
+#menu a.pastille-black
+{
+	background-image: url("../img/icons/pastille_noir_normal.gif");
+}
+
+#menu a.pastille-black:hover
+{
+	background-image: url("../img/icons/pastille_noir_rollover.gif");
+}
+
+#menu div.has-children
+{
+	background-image: url("../img/icons/arr_black_2.gif");
+	background-repeat: no-repeat;
+    background-position: right center;
+    margin-right: 3px;
+}
+
+#menu a.link
+{
+	margin-right: 4px;	
+}
+
+#menu li:hover
+{
+  	background-color: #F3D698;
+}
+
+#menu li.main-item, #menu li.icon-item
+{
+	line-height: 20px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+#menu li.main-item:hover, #menu li.icon-item:hover
+{
+  	background-color: #EBF3F5;
+}
+
+#menu li.icon-item
+{
+	float: right;
+}
+
+#menu li > ul
+{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.4s linear 0s, opacity 0.4s linear 0s;
+}
+
+#menu li:hover > ul
+{
+  visibility: visible;
+  opacity: 1;
+}
+
+#menu ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 99999;    
+	background-color: #C9E0E7;
+}
+
+#menu ul ul
+{
+  top: -1;
+  left: 100%;
+}
+
+#menu ul li
+{
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: block;  
+    border-left: 1px solid #316AC5;
+    border-right: 1px solid #316AC5;
+}
+
+#menu ul li:first-child
+{   
+    border-top: 1px solid #316AC5;
+}
+
+#menu ul li:last-child
+{   
+    border-bottom: 1px solid #316AC5;
+}
+
+#menu ul a
+{    
+	padding-top: 2px;
+	padding-bottom: 2px;
+	height: auto;
+    display: block;
+    white-space: nowrap;
+    float: none;
+	text-transform: none;
+}
+
+#menu:after 
+{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}

@@ -1,0 +1,45 @@
+LICENCE D'UTILISATEUR POUR LE LOGICIEL FAST
+
+TERMES DE LA LICENCE
+
+Définitions :
+
+FAST : Fast Advanced Software for Table Soccer
+ITSF : International Table Soccer Federation
+
+I. Définition du logiciel 
+
+FAST est un logiciel de gestion de tournoi de Football de Table. Ce logiciel est sous licence « freeware » (« gratuiciel ») : celui-ci est gratuit mais est soumis à restrictions citées ci-dessous dans le chapitre III (III. Limitations).
+Le logiciel FAST est mis à disposition par l'ITSF auprès de ses fédérations membres.
+
+II. Conditions d'acceptation de la licence
+
+L'acceptation de la licence confère le droit d'utiliser le logiciel FAST mais ne donne en aucun cas le droit de propriété sur celui-ci.
+
+III. Limitations
+
+III.a. Décompilation :
+
+La décompilation, la modification, la traduction (non soumise à l'ITSF) et tout autre changement effectué sur l'ensemble du logiciel sans le consentement de l'ITSF ne sont pas autorisés.
+
+III.b. Utilisation :
+
+L'utilisation du logiciel FAST est limitée aux tournois de Football de Table, celui-ci ne peut en aucun cas être utilisé pour la gestion de tout autre tournoi sportif ou activités non liées au Football de Table.
+
+Seules les fédérations affiliées à l'ITSF (International Table Soccer Federation) sont autorisées à utiliser le logiciel FAST. Pour savoir si une fédération est affiliée à l'ITSF, veuillez consulter le site web ITSF, section « members » :
+http://www.table-soccer.org/members/
+
+III.c. Responsabilité :
+
+L'ITSF ne peut en aucun cas être rendue responsable des dommages apportés à un quelconque système lors de l'installation, l'utilisation et la désinstallation de FAST.
+
+L'ITSF ne peut pas être tenue pour responsable des informations contenues dans le fichier d'initialisation fourni pour un tournoi.
+Toutes ces informations doivent être vérifiées par les organisateurs.
+
+III.d. Utilisation de l'application dans son ensemble :
+
+L'utilisation de FAST est autorisée quand elle concerne l'application dans son ensemble. L'utilisation d'éléments individuels, comme par exemple la base de données seule ou les éventuels plugins, n'est pas autorisée.
+
+IV. Distribution
+
+L'ITSF seule est autorisée à diffuser le logiciel FAST par l'intermédiaire de son site web, dans la section « FAST » (http://www.table-soccer.org/page/fast).

@@ -1,0 +1,189 @@
+
+body {
+	margin-top:0px; 
+	margin-bottom:0px; 
+	margin-left:3px; 
+	margin-right:3px;
+	overflow:hidden;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+input,textarea,p,td,select {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.title_box { 
+color:#000000;
+background-color:#C9E0E7;
+height:20px;
+text-align:center;
+font-weight:bold;
+font-size:19px;
+border-color:#000000;
+border-style:solid;
+border-width:1px;
+border-bottom-width:0px;
+padding-left:10px;
+padding-right:10px;
+text-transform:uppercase; 
+}
+
+.infos_box {
+color:#000000; 
+background-color:#F8FBFC;
+padding:10px; 
+text-align:center; 
+font-size:26px;
+border-color:#000000;
+border-style:solid;
+border-width:1px;
+}
+
+.textInBoxLabel {
+font-size:26px;
+font-weight:bold;
+}
+
+.textInBox {
+font-size:26px;
+}
+
+.selectInBox {
+font-size:44px;
+width:400px;
+}
+
+.menu_button_selected {
+font-size:26px;
+font-style:normal; 
+font-weight:bold; 
+color:#000000;
+background-color:#AAD0DC;
+text-transform:uppercase; 
+text-align:center;
+height:50px;
+width:100%;
+border-style:inset;
+}
+
+.menu_button {
+font-size:26px;
+font-style:normal; 
+font-weight:bold; 
+color:#000000;
+background-color:#EDF4F7;
+text-transform:uppercase; 
+text-align:center;
+height:50px;
+width:100%;
+}
+
+.options_button {
+color:#000000;
+background-color:#FBE6B1;
+font-weight:normal; 
+font-size:30px;
+padding:10px;
+text-align:center;
+text-transform:uppercase; 
+}
+
+.options_button_selected {
+color:#000000;
+background-color:#F7C753;
+font-weight:normal; 
+font-size:30px;
+padding:10px;
+text-align:center;
+text-transform:uppercase; 
+border-style:inset;
+}
+
+.options_button_disabled {
+color:#ACA899;
+background-color:#FBE6B1;
+font-weight:normal; 
+font-size:30px;
+padding:10px;
+text-align:center;
+text-transform:uppercase;
+border-style:solid;
+border-width:1px;
+border-color:#ACA899;
+}
+
+.modify_button {
+color:#000000; 
+background-color:#EDF4F7;
+font-weight:bold; 
+font-size:16px;
+padding:3px;
+text-align:center;
+margin-right:10px;
+text-transform:uppercase; 
+}
+
+.modify_button_selected {
+color:#000000; 
+background-color:#AAD0DC;
+font-weight:bold; 
+font-size:16px;
+padding:3px;
+text-align:center;
+margin-right:10px;
+text-transform:uppercase;
+border-style:inset;
+}
+
+.keyboard_table {
+background-color:#DEDEDE;
+position:absolute; 
+border-width:2px; 
+border-style:solid;
+border-color:black;
+}
+
+.keyboard_input {
+font-size:40px;
+font-family:monospace;
+font-weight:bold;
+padding-left:10px;
+padding-right:10px;
+padding-top:0px;
+padding-bottom:0px;
+margin:5px;
+}
+
+.titreListe { 
+font-weight:bold;
+text-align:left;
+padding-bottom:5px;
+font-size:14px;
+}
+
+.colListe {
+text-align:left;
+padding-top:3px;
+padding-bottom:3px;
+font-size:16px;
+}
+
+.legende {
+margin-left:10px;
+color:#666;
+font-size:14px;
+vertical-align:middle;
+text-align:left;
+} 
+
+.legende_ranking {
+font-size:15px;
+padding-right:20px;
+}
+
+A.linkTeam:link 				{color:#000000; text-decoration:none;}
+A.linkTeam:visited 			{color:#000000; text-decoration:none; }
+A.linkTeam:hover 				{color:#000000; text-decoration:underline; }
+A.linkTeam:active 			{color:#000000; text-decoration:none; }
+
+
